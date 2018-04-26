@@ -1,0 +1,68 @@
+{
+  "revision_id": "ff6bce9cb8352d00a4682c5aaa3b85395579847363e2cf7f9deeb8b964e0703d",
+  "name": "motd",
+  "run_list": [
+    "recipe[motd::default]"
+  ],
+  "named_run_lists": {
+    "foo": [
+      "recipe[motd::default]"
+    ],
+    "bar": [
+      "recipe[motd::default]"
+    ]
+  },
+  "cookbook_locks": {
+    "chef_handler": {
+      "version": "3.0.2",
+      "identifier": "60cbc4e26770cf157c9f5ec71c0abfdeb79784e5",
+      "dotted_decimal_identifier": "27245644236681423.6047998442675210.210963283805413",
+      "cache_key": "chef_handler-3.0.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/chef_handler/versions/3.0.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/chef_handler/versions/3.0.2/download",
+        "version": "3.0.2"
+      }
+    },
+    "motd": {
+      "version": "0.6.4",
+      "identifier": "0d3f734666cf0865c8d7a45a22edced763afa4c3",
+      "dotted_decimal_identifier": "3728939032170248.28649801148670701.227424485745859",
+      "cache_key": "motd-0.6.4-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/motd/versions/0.6.4/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/motd/versions/0.6.4/download",
+        "version": "0.6.4"
+      }
+    }
+  },
+  "default_attributes": {
+    "foo": "bar"
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "chef_handler",
+        "= 3.0.2"
+      ],
+      [
+        "motd",
+        "= 0.6.4"
+      ]
+    ],
+    "dependencies": {
+      "chef_handler (3.0.2)": [
+
+      ],
+      "motd (0.6.4)": [
+        [
+          "chef_handler",
+          ">= 0.0.0"
+        ]
+      ]
+    }
+  }
+}
